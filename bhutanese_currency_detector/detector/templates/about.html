@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-10 offset-lg-1">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h3 class="card-title mb-0">About The Project</h3>
+            </div>
+            <div class="card-body">
+                <div class="mb-5">
+                    <h4>System Overview</h4>
+                    <p>{{ about_text }}</p>
+                    
+                    <h5 class="mt-4">Key Features:</h5>
+                    <ul>
+                        <li>Support for image upload and camera capture</li>
+                        <li>Audio feedback for accessibility</li>
+                        <li>Fast and accurate detection of all Bhutanese currency denominations</li>
+                        <li>User-friendly interface</li>
+                        <li>Built with Django and PyTorch</li>
+                    </ul>
+                </div>
+                
+                <h4 class="border-bottom pb-2 mb-4">Meet The Team</h4>
+                <div class="row">
+                    {% for developer in developers %}
+                    <div class="col-md-4 mb-2">
+                        <div class="card h-100">
+                            <img src="{% static developer.image %}" class="card-img-top" alt="{{ developer.name }}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ developer.name }}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{{ developer.role }}</h6>
+                                <p class="card-text">{{ developer.bio }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

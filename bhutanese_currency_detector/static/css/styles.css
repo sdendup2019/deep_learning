@@ -1,0 +1,55 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.card-header {
+    font-weight: 500;
+}
+
+.detection-toggle {
+    margin-bottom: 20px;
+}
+
+#camera-feed {
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    background-color: #f8f9fa;
+    max-height: 400px;
+    margin-bottom: 10px;
+}
+
+footer {
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 8px 20px;
+    font-weight: 500;
+}
+
+#results-section {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* About page styles */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
