@@ -1,3 +1,4 @@
+// /static/js/camera.js
 document.addEventListener('DOMContentLoaded', function() {
     const cameraToggle = document.getElementById('camera-toggle');
     const uploadToggle = document.getElementById('upload-toggle');

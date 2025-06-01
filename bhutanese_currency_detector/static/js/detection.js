@@ -1,3 +1,4 @@
+// /static/js/detection.js
 document.addEventListener('DOMContentLoaded', function() {
     const currencyForm = document.getElementById('currency-form');
     

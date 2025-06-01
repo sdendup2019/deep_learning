@@ -1,3 +1,4 @@
+<!-- /detector/templates/base.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="{% url 'home' %}">
@@ -31,13 +32,20 @@
         </div>
     </nav>
 
-    <div class="container mt-4">
+    <main class="container mt-4 flex-grow-1">
         {% block content %}{% endblock %}
-    </div>
+    </main>
 
-    <footer class="bg-dark text-white mt-5 py-3">
-        <div class="container text-center">
-            <p>&copy; 2025 Bhutanese Currency Detector. All rights reserved.</p>
+    <footer class="bg-dark text-light mt-5">
+        <div class="container py-3">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; {% now "Y" %} Bhutanese Currency Detector. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Made with ❤️ in Bhutan</p>
+                </div>
+            </div>
         </div>
     </footer>
 

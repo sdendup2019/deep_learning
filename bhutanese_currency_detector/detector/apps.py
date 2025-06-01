@@ -1,3 +1,5 @@
+#/detector/app.py
+
 from django.apps import AppConfig
 
 

@@ -1,3 +1,5 @@
+#/detector/models.py
+
 from django.db import models
 
 class CurrencyImage(models.Model):
